@@ -8,17 +8,23 @@ namespace Puello_Lab4
 {
     class Program
     {
+
+        //Create strings for the person using 'private string'. Then, change form 'public' to 'private'. 
+        //Create class hold for the personal data using 'private string'.
+        //Create the variables for each data such as First name, Etc...
         public class Person
         {
             private string fName;  //This is for the first name.
             private string MName;  //This is for middle name.
-            private string LName;  //
+            private string LName;  //This is for  last name.
             //Create Street one
-            private string fStreet;
+
+            //Address info the user. 
+            private string fStreet;  
             //create Stree two
-            private string Sstreet;
+            private string Sstreet;  
             //Create City  
-            private string City;
+            private string City;    
             //Create State
             private string State;
             //Create ZipCode
@@ -29,7 +35,9 @@ namespace Puello_Lab4
             private string email;
 
 
-            public string FirstN
+            //From HERE Down:
+            //Public each private string into a new variable with 'Get' and 'Set' and returning the value back.             
+            public string FirstN //New Variable Name
             {
                 get
                 {
@@ -41,7 +49,7 @@ namespace Puello_Lab4
                 }
             }
 
-            public string MiddleN
+            public string MiddleN //New Variable Name
             {
                 get
                 {
@@ -52,7 +60,7 @@ namespace Puello_Lab4
                     MName = value;
                 }
             }
-            public string LastN
+            public string LastN //New Variable Name
             {
                 get
                 {
@@ -64,7 +72,7 @@ namespace Puello_Lab4
                 }
             }
 
-            public string FirstS
+            public string FirstS //New Variable Name
             {
                 get
                 {
@@ -75,7 +83,7 @@ namespace Puello_Lab4
                     fStreet = value;
                 }
             }
-            public string SecondS
+            public string SecondS //New Variable Name
             {
                 get
                 {
@@ -87,7 +95,7 @@ namespace Puello_Lab4
                 }
             }
 
-            public string city
+            public string city //New Variable Name
             {
                 get
                 {
@@ -99,7 +107,7 @@ namespace Puello_Lab4
                     City = value;
                 }
             }
-            public string state
+            public string state //New Variable Name
             {
                 get
                 {
@@ -110,7 +118,7 @@ namespace Puello_Lab4
                     State = value;
                 }
             }
-            public string zip
+            public string zip //New Variable Name
             {
                 get
                 {
@@ -123,7 +131,7 @@ namespace Puello_Lab4
                 }
             }
 
-            public string phoneN
+            public string phoneN //New Variable Name
             {
                 get
                 {
@@ -135,7 +143,7 @@ namespace Puello_Lab4
                     Phone = value;
                 }
             }
-            public string Email
+            public string Email //New Variable Name
             {
                 get
                 {
@@ -152,63 +160,61 @@ namespace Puello_Lab4
 
         static void Main(string[] args)
         {
-            //create a person name 
-            Person tPerson = new Person();
+            // In the Main Function, Pass the Person class into a new variable called 'tPerson'...
+            Person tPerson = new Person(); //tPerson is the new Person in here
 
-            //get date fill person
+            // Console each variable holder private using the new name private variable name.
+            // Add on the console, '+Poopy so the world gets displayed with the output.
             Console.WriteLine("Pleas enter the person first Name: ");
-            tPerson.FirstN = Console.ReadLine();
-
-            tPerson.FirstN += "Poopy";
+            tPerson.FirstN = Console.ReadLine(); //New Variable Name
+            tPerson.FirstN += "Poope";
 
             Console.WriteLine("Pleas enter the person Middle Name: ");
-            tPerson.MiddleN = Console.ReadLine();
-            tPerson.MiddleN += "Poopy";
+            tPerson.MiddleN = Console.ReadLine(); //New Variable Name
+            
 
             Console.WriteLine("Pleas enter the person Last Name: ");
-            tPerson.LastN = Console.ReadLine();
-            tPerson.LastN += "Poopy";
+            tPerson.LastN = Console.ReadLine(); //New Variable Name
+           
 
             Console.WriteLine("Pleas Enter the person First Street Name: ");
-            tPerson.FirstS = Console.ReadLine();
-            tPerson.FirstS += "Poopy";
+            tPerson.FirstS = Console.ReadLine(); //New Variable Name
+            
 
 
             Console.WriteLine("Pleas Enter the person SECOND Street Name: ");
-            tPerson.SecondS = Console.ReadLine() + "Poopy";
-            tPerson.SecondS += "Poopy";
+            tPerson.SecondS = Console.ReadLine(); //New Variable Name
+            
 
             Console.WriteLine("Pleas Enter the Person City's Name: ");
-            tPerson.city = Console.ReadLine();
-            tPerson.city += "Poopy";
+            tPerson.city = Console.ReadLine(); //New Variable Name
+            
 
             Console.WriteLine("Pleas Enter the Person State's Name: ");
-            tPerson.state = Console.ReadLine();
-            tPerson.state += "Poopy";
+            tPerson.state = Console.ReadLine(); //New Variable Name
+            
 
             Console.WriteLine("Enter your ZipCode: ");
-            tPerson.zip = Console.ReadLine();
-            tPerson.zip += "Poopy";
+            tPerson.zip = Console.ReadLine(); //New Variable Name
+            
 
             Console.WriteLine("Pleas Enter the person's Phone Number: ");
-            tPerson.phoneN = Console.ReadLine();
-            tPerson.phoneN += "Poopy";
+            tPerson.phoneN = Console.ReadLine(); //New Variable Name
+            
 
             Console.WriteLine("Pleas Enter the person Email: ");
-            tPerson.Email = Console.ReadLine();
-            tPerson.Email += "Poopy";
+            tPerson.Email = Console.ReadLine(); //New Variable Name
+            
 
-
-            //Output peroson data                     Continue with the rest of it. 
+            //Display each person info 
             Console.WriteLine($"\nNew Menber: {tPerson.FirstN} {tPerson.MiddleN} {tPerson.LastN}\nAddress: {tPerson.FirstN} {tPerson.SecondS} {tPerson.city} {tPerson.state}, {tPerson.zip}.\nPhone: {tPerson.phoneN}\nemail: {tPerson.Email}");
-           
-            //Let the user deside when they are done with the program.
-            BasicTools .Pause();
+
+
+            // Call the BasicTool for pause() and so it display output
+            BasicTools.Pause();
 
             BasicTools.PrintCopyright();
 
-
-           
             //###############################################################################################################
             //NOTES: 
             // A class can have two different functions instenss of an object. Classes are to give the avility to do multiple things.
