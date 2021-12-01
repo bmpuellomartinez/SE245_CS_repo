@@ -88,7 +88,7 @@ namespace Puello_WindowsAssigment
             }
 
             //This will make sure that the user enter only numbers.
-            if (int.TryParse(txtPhone.Text, out personTotal) && txtPhone.Text.Length > 0)
+            if (int.TryParse(txtPhone.Text, out personTotal))
             {
                 person.Phone = txtPhone.Text;
             }
@@ -98,13 +98,13 @@ namespace Puello_WindowsAssigment
             }
 
             //This function will check for only numbers entry.
-            if (int.TryParse(txtCellphone.Text, out personTotal) && txtCellphone.Text.Length > 0)
+            if (int.TryParse(txtCellphone.Text, out personTotal))
             {
                 person.Cellphone = txtCellphone.Text;
             }
             else
             {
-                person.feedback += "\nERROR: Enter valid cell phone number.\n";
+                person.feedback += "ERROR: Enter valid cell phone number.\n";
             }
 
             //This function will pass douwn value to and also info to the user.

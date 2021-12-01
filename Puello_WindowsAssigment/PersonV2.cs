@@ -52,7 +52,7 @@ namespace Puello_WindowsAssigment
                 }
                 else
                 {
-                    feedback += "ERROR: Enter a valid email.\n";
+                    feedback += "ERROR: Enter a valid Instagram email.\n";
                 }
             }
         }
