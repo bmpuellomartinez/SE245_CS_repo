@@ -46,8 +46,9 @@ namespace Puello_Week5BookClassInWindows
         //There we are putting the butto to work
         private void addbutton_Click(object sender, EventArgs e)
         {
-            Book temp = new Book();
+            Ebook temp = new Ebook();
             double dblTemp = 0.0;
+            int temppages;
 
             //temp is just a name it can be changeable.
             //here are all the text vars with their names.
@@ -56,6 +57,16 @@ namespace Puello_Week5BookClassInWindows
             temp.AuthorLast = txtAuthorLast.Text;   //For the author's last name.
             temp.DatePublished = calDate.Value;     //The future date of the book
             temp.Email = txtEmail.Text;             //For the author's email.
+            temp.DateRentalExperes = dblDateRental.Value;
+
+            if (Int32.TryParse(txtPages.Text, out temppages))
+            {
+                temp.Pages = temppages;
+            }
+            else
+            {
+                temp.Feedback += "ERROR: Enter the amount of pages\n";
+            }
             if(Double.TryParse(txtPrice.Text, out dblTemp))
             {
 
@@ -63,7 +74,15 @@ namespace Puello_Week5BookClassInWindows
             }
             else
             {
-                temp.Feedback += "ERROR: Enter A valid Price"; //console display!
+                temp.Feedback += "ERROR: Enter A valid Price\n"; //console display!
+            }
+            if (Int32.TryParse(txtBookmark.Text, out temppages))
+            {
+                temp.BookmarkPage = temppages;
+            }
+            else
+            {
+                temp.Feedback += "ERROR: Enter the book mark\n";
             }
 
             //Pasing value
@@ -74,9 +93,22 @@ namespace Puello_Week5BookClassInWindows
             else
             {
                 //This will be display back to the console After all the info is correctly entered.
-                lblFeedback.Text = "Title: " + temp.Title + "\nWritten By " + temp.AuthorFirst + "\t " + temp.AuthorLast + "\nPublished "+ temp.DatePublished.ToString() + "\nEmail "+ temp.Email + "\nPrice $" + temp.Price.ToString();
-
+                // lblFeedback.Text = "Title: " + temp.Title + "\nWritten By " + temp.AuthorFirst + "\t " + temp.AuthorLast + "\nPublished "+ temp.DatePublished.ToString() + "\nEmail "+ temp.Email + "\nPrice $" + temp.Price.ToString()  + "\nPages: "+ temp.Pages.ToString() + "\nBook Mark: " + temp.BookmarkPage + "\nRental Date: " + temp.DateRentalExperes.ToString();
+                lblFeedback.Text = temp.AddingRecord();
             }
+
+
+            //bool Member = chkMembership.Checked;
+            //MessageBox.Show(Member.ToString());
+            //if (!temp.Feedback.Contains("ERROR:"))
+            //{
+            //    lblFeedback.Text = temp.AddingRecord();
+            //}
+            //else
+            //{
+            //    lblFeedback.Text = temp.Feedback;
+            //}
+
 
         }
 
@@ -86,6 +118,26 @@ namespace Puello_Week5BookClassInWindows
         }
 
         private void lblFeedback_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dblDateRental_ValueChanged(object sender, EventArgs e)
         {
 
         }

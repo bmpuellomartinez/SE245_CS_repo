@@ -12,11 +12,14 @@ namespace Puello_Week5BookClassInWindows
 {
     class ValidationLibrary
     {   //This function is not set up yet but we are trying to check for bad worlds.
-        public static bool GotPoop(string temp)
+        public static bool GotBadWords(string temp)
         {
+
             bool result = false;
 
-            if (temp.Contains("Poop"))
+            string[] strBadWords = { "POOP", "HOMEWORK", "CACA" };
+            foreach (string stBW in strBadWords)
+            if (temp.ToUpper().Contains(stBW))
             {
 
                 result = true; 
@@ -25,24 +28,49 @@ namespace Puello_Week5BookClassInWindows
             return result; //If the answer is valid the program will aproved it.
         }
 
-        //This function will check for a valid emails. The '&&' symbols meabs 'AND'. The '||' symbols means OR.
        
-        public static bool IsValidEmail(string temp)
-        {   
+        public static bool IsItFilledIn(string temp, int minlen)
+        {
             bool result = false;
-
-            if (temp.Contains("@") && ( temp.Contains(".com")  || temp.Contains(".org") || temp.Contains(".net")))
+            if(temp.Length >= minlen)
             {
                 result = true;
             }
-            return result; //If the answer is valid the program will aproved it.
+            return result;
+                
+        }
+
+
+       //This will chack for valid emails.
+        public static bool IsValidEmail(string temp)
+        {
+            bool result = true;
+
+            int atLocation = temp.IndexOf("@");
+            int NextatLocation = temp.IndexOf("@", atLocation + 1);
+
+            int periodLocation = temp.LastIndexOf(".");
+
+            if(temp.Length < 8)
+            {
+                result = false;
+            }
+            else if (atLocation < 2)
+            {
+                result = false;
+            }
+            else if (periodLocation + 2 > (temp.Length))
+            {
+                result = false;
+            }
+            return result;
         }
 
         //This function will chack that date entered is a future future date.
         public static bool IsAFutureDate(DateTime temp)
         {
             bool result = false;
-           if(temp >= DateTime.Now)
+           if(temp >= DateTime.Now.AddDays(14))
             {
                 result = true;
             }
@@ -50,26 +78,12 @@ namespace Puello_Week5BookClassInWindows
 
         }
 
-        // This fuctiion is not set up yet.
-        // This function will check for amount of letters length entered. This fuctiion is not set up yet.
-        public static bool IsItFilledIn(string temp)
-        {
-            bool result = false;
-
-            if (temp.Length > 0)
-            {
-                result = true;
-
-            }
-            return result; //If the answer is valid the program will aproved it.
-
-        }
-        // This fuctiion is not set up yet.
+        //This function will check for the length.
         public static bool CheckingForLength(string temp)
         {
             bool result = false;
 
-            if(temp.Length > 10)
+            if(temp.Length > 0)
             {
                 result = true;
             }
@@ -87,11 +101,17 @@ namespace Puello_Week5BookClassInWindows
             }
             return result; //If the answer is valid the program will aproved it.
         }
+        //This function will make sure that the amount of length is valid.
+        public static bool IsMinimunAmount( int temp, int min) 
+        {
+            bool result = false;
+            if (temp >= min)
+            {
+                result = true;
+            }
 
-
-
-
-
+            return result;
+        }
 
     }
 

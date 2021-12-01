@@ -45,6 +45,12 @@ namespace Puello_Week5BookClassInWindows
             this.calDate = new System.Windows.Forms.DateTimePicker();
             this.lblFeedback = new System.Windows.Forms.Label();
             this.addbutton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPages = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtBookmark = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dblDateRental = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lbltitle
@@ -171,6 +177,7 @@ namespace Puello_Week5BookClassInWindows
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(483, 53);
             this.txtPrice.TabIndex = 12;
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             // 
             // calDate
             // 
@@ -185,7 +192,7 @@ namespace Puello_Week5BookClassInWindows
             // 
             this.lblFeedback.AutoSize = true;
             this.lblFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblFeedback.Location = new System.Drawing.Point(758, 667);
+            this.lblFeedback.Location = new System.Drawing.Point(890, 903);
             this.lblFeedback.Name = "lblFeedback";
             this.lblFeedback.Size = new System.Drawing.Size(160, 37);
             this.lblFeedback.TabIndex = 14;
@@ -196,7 +203,7 @@ namespace Puello_Week5BookClassInWindows
             // 
             this.addbutton.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.addbutton.Location = new System.Drawing.Point(723, 956);
+            this.addbutton.Location = new System.Drawing.Point(835, 804);
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(268, 57);
             this.addbutton.TabIndex = 15;
@@ -204,11 +211,74 @@ namespace Puello_Week5BookClassInWindows
             this.addbutton.UseVisualStyleBackColor = false;
             this.addbutton.Click += new System.EventHandler(this.addbutton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(227, 524);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 37);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Pages:";
+            // 
+            // txtPages
+            // 
+            this.txtPages.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtPages.Location = new System.Drawing.Point(366, 508);
+            this.txtPages.Name = "txtPages";
+            this.txtPages.Size = new System.Drawing.Size(483, 53);
+            this.txtPages.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(164, 605);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 37);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Book Mark";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // txtBookmark
+            // 
+            this.txtBookmark.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtBookmark.Location = new System.Drawing.Point(366, 594);
+            this.txtBookmark.Name = "txtBookmark";
+            this.txtBookmark.Size = new System.Drawing.Size(482, 53);
+            this.txtBookmark.TabIndex = 19;
+            this.txtBookmark.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Location = new System.Drawing.Point(143, 688);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(193, 37);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Date Rental:";
+            // 
+            // dblDateRental
+            // 
+            this.dblDateRental.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dblDateRental.Location = new System.Drawing.Point(366, 694);
+            this.dblDateRental.Name = "dblDateRental";
+            this.dblDateRental.Size = new System.Drawing.Size(483, 38);
+            this.dblDateRental.TabIndex = 21;
+            this.dblDateRental.ValueChanged += new System.EventHandler(this.dblDateRental_ValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1695, 1058);
+            this.ClientSize = new System.Drawing.Size(1987, 1272);
+            this.Controls.Add(this.dblDateRental);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtBookmark);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtPages);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.addbutton);
             this.Controls.Add(this.lblFeedback);
             this.Controls.Add(this.calDate);
@@ -251,6 +321,12 @@ namespace Puello_Week5BookClassInWindows
         private System.Windows.Forms.DateTimePicker calDate;
         private System.Windows.Forms.Label lblFeedback;
         private System.Windows.Forms.Button addbutton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPages;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtBookmark;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dblDateRental;
     }
 }
 

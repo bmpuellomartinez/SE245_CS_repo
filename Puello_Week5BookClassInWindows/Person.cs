@@ -8,10 +8,12 @@ namespace Puello_Week5BookClassInWindows
 {
     public class Person
     {
-        
-        private string fName;  //This is for the first name.
-        private string MName;  //This is for middle name.
-        private string LName;  //This is for  last name.
+        //This is for the first name.
+        private string fName;
+        //This is for middle name.
+        private string MName;
+        //This is for  last name.
+        private string LName;  
         //Address info the user. 
         private string fStreet;
         //create Stree two

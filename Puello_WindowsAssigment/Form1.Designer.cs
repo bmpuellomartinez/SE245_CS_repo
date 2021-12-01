@@ -39,18 +39,24 @@ namespace Puello_WindowsAssigment
             this.pzip = new System.Windows.Forms.Label();
             this.pphone = new System.Windows.Forms.Label();
             this.pemail = new System.Windows.Forms.Label();
-            this.pfnamevar = new System.Windows.Forms.TextBox();
-            this.pmnamevar = new System.Windows.Forms.TextBox();
-            this.plnamevar = new System.Windows.Forms.TextBox();
-            this.pfstreetvar = new System.Windows.Forms.TextBox();
-            this.pSstreetvar = new System.Windows.Forms.TextBox();
-            this.pcityvar = new System.Windows.Forms.TextBox();
-            this.pstatevar = new System.Windows.Forms.TextBox();
-            this.pzipvar = new System.Windows.Forms.TextBox();
-            this.pphonevar = new System.Windows.Forms.TextBox();
-            this.pemailvar = new System.Windows.Forms.TextBox();
-            this.pfeedback = new System.Windows.Forms.Label();
+            this.txtFname = new System.Windows.Forms.TextBox();
+            this.txtMname = new System.Windows.Forms.TextBox();
+            this.txtLname = new System.Windows.Forms.TextBox();
+            this.txtFstreet = new System.Windows.Forms.TextBox();
+            this.txtSstreet = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.txtState = new System.Windows.Forms.TextBox();
+            this.txtZip = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblFeedback = new System.Windows.Forms.Label();
             this.feedbackbutton = new System.Windows.Forms.Button();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCellphone = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtUrlEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // pfname
@@ -149,131 +155,196 @@ namespace Puello_WindowsAssigment
             // 
             this.pemail.AutoSize = true;
             this.pemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pemail.Location = new System.Drawing.Point(131, 659);
+            this.pemail.Location = new System.Drawing.Point(131, 679);
             this.pemail.Name = "pemail";
             this.pemail.Size = new System.Drawing.Size(106, 37);
             this.pemail.TabIndex = 9;
             this.pemail.Text = "Email:";
             this.pemail.Click += new System.EventHandler(this.label10_Click);
             // 
-            // pfnamevar
+            // txtFname
             // 
-            this.pfnamevar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pfnamevar.Location = new System.Drawing.Point(290, 74);
-            this.pfnamevar.Name = "pfnamevar";
-            this.pfnamevar.Size = new System.Drawing.Size(387, 44);
-            this.pfnamevar.TabIndex = 10;
+            this.txtFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtFname.Location = new System.Drawing.Point(290, 74);
+            this.txtFname.Name = "txtFname";
+            this.txtFname.Size = new System.Drawing.Size(387, 44);
+            this.txtFname.TabIndex = 10;
+            this.txtFname.TextChanged += new System.EventHandler(this.txtFname_TextChanged);
             // 
-            // pmnamevar
+            // txtMname
             // 
-            this.pmnamevar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pmnamevar.Location = new System.Drawing.Point(290, 143);
-            this.pmnamevar.Name = "pmnamevar";
-            this.pmnamevar.Size = new System.Drawing.Size(387, 44);
-            this.pmnamevar.TabIndex = 11;
+            this.txtMname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMname.Location = new System.Drawing.Point(290, 143);
+            this.txtMname.Name = "txtMname";
+            this.txtMname.Size = new System.Drawing.Size(387, 44);
+            this.txtMname.TabIndex = 11;
+            this.txtMname.TextChanged += new System.EventHandler(this.pmnamevar_TextChanged);
             // 
-            // plnamevar
+            // txtLname
             // 
-            this.plnamevar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.plnamevar.Location = new System.Drawing.Point(290, 212);
-            this.plnamevar.Name = "plnamevar";
-            this.plnamevar.Size = new System.Drawing.Size(387, 44);
-            this.plnamevar.TabIndex = 12;
+            this.txtLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtLname.Location = new System.Drawing.Point(290, 212);
+            this.txtLname.Name = "txtLname";
+            this.txtLname.Size = new System.Drawing.Size(387, 44);
+            this.txtLname.TabIndex = 12;
             // 
-            // pfstreetvar
+            // txtFstreet
             // 
-            this.pfstreetvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pfstreetvar.Location = new System.Drawing.Point(290, 270);
-            this.pfstreetvar.Name = "pfstreetvar";
-            this.pfstreetvar.Size = new System.Drawing.Size(387, 44);
-            this.pfstreetvar.TabIndex = 13;
+            this.txtFstreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtFstreet.Location = new System.Drawing.Point(290, 270);
+            this.txtFstreet.Name = "txtFstreet";
+            this.txtFstreet.Size = new System.Drawing.Size(387, 44);
+            this.txtFstreet.TabIndex = 13;
             // 
-            // pSstreetvar
+            // txtSstreet
             // 
-            this.pSstreetvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pSstreetvar.Location = new System.Drawing.Point(290, 338);
-            this.pSstreetvar.Name = "pSstreetvar";
-            this.pSstreetvar.Size = new System.Drawing.Size(387, 44);
-            this.pSstreetvar.TabIndex = 14;
+            this.txtSstreet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtSstreet.Location = new System.Drawing.Point(290, 338);
+            this.txtSstreet.Name = "txtSstreet";
+            this.txtSstreet.Size = new System.Drawing.Size(387, 44);
+            this.txtSstreet.TabIndex = 14;
             // 
-            // pcityvar
+            // txtCity
             // 
-            this.pcityvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pcityvar.Location = new System.Drawing.Point(290, 400);
-            this.pcityvar.Name = "pcityvar";
-            this.pcityvar.Size = new System.Drawing.Size(387, 44);
-            this.pcityvar.TabIndex = 15;
+            this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCity.Location = new System.Drawing.Point(290, 400);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(387, 44);
+            this.txtCity.TabIndex = 15;
+            this.txtCity.TextChanged += new System.EventHandler(this.txtCity_TextChanged);
             // 
-            // pstatevar
+            // txtState
             // 
-            this.pstatevar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pstatevar.Location = new System.Drawing.Point(290, 472);
-            this.pstatevar.Name = "pstatevar";
-            this.pstatevar.Size = new System.Drawing.Size(387, 44);
-            this.pstatevar.TabIndex = 16;
+            this.txtState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtState.Location = new System.Drawing.Point(290, 472);
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(387, 44);
+            this.txtState.TabIndex = 16;
             // 
-            // pzipvar
+            // txtZip
             // 
-            this.pzipvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pzipvar.Location = new System.Drawing.Point(290, 537);
-            this.pzipvar.Name = "pzipvar";
-            this.pzipvar.Size = new System.Drawing.Size(387, 44);
-            this.pzipvar.TabIndex = 17;
+            this.txtZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtZip.Location = new System.Drawing.Point(290, 537);
+            this.txtZip.Name = "txtZip";
+            this.txtZip.Size = new System.Drawing.Size(387, 44);
+            this.txtZip.TabIndex = 17;
             // 
-            // pphonevar
+            // txtPhone
             // 
-            this.pphonevar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pphonevar.Location = new System.Drawing.Point(290, 599);
-            this.pphonevar.Name = "pphonevar";
-            this.pphonevar.Size = new System.Drawing.Size(387, 44);
-            this.pphonevar.TabIndex = 18;
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPhone.Location = new System.Drawing.Point(290, 599);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(387, 44);
+            this.txtPhone.TabIndex = 18;
             // 
-            // pemailvar
+            // txtEmail
             // 
-            this.pemailvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pemailvar.Location = new System.Drawing.Point(290, 672);
-            this.pemailvar.Name = "pemailvar";
-            this.pemailvar.Size = new System.Drawing.Size(387, 44);
-            this.pemailvar.TabIndex = 19;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtEmail.Location = new System.Drawing.Point(290, 672);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(387, 44);
+            this.txtEmail.TabIndex = 19;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
-            // pfeedback
+            // lblFeedback
             // 
-            this.pfeedback.AutoSize = true;
-            this.pfeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pfeedback.Location = new System.Drawing.Point(695, 835);
-            this.pfeedback.Name = "pfeedback";
-            this.pfeedback.Size = new System.Drawing.Size(160, 37);
-            this.pfeedback.TabIndex = 20;
-            this.pfeedback.Text = "FeedBack";
+            this.lblFeedback.AutoSize = true;
+            this.lblFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblFeedback.Location = new System.Drawing.Point(722, 1043);
+            this.lblFeedback.Name = "lblFeedback";
+            this.lblFeedback.Size = new System.Drawing.Size(160, 37);
+            this.lblFeedback.TabIndex = 20;
+            this.lblFeedback.Text = "FeedBack";
+            this.lblFeedback.Click += new System.EventHandler(this.lblFeedback_Click);
             // 
             // feedbackbutton
             // 
-            this.feedbackbutton.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.feedbackbutton.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.feedbackbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.feedbackbutton.Location = new System.Drawing.Point(684, 915);
+            this.feedbackbutton.Location = new System.Drawing.Point(712, 967);
             this.feedbackbutton.Name = "feedbackbutton";
             this.feedbackbutton.Size = new System.Drawing.Size(188, 54);
             this.feedbackbutton.TabIndex = 21;
             this.feedbackbutton.Text = "Add Book";
             this.feedbackbutton.UseVisualStyleBackColor = false;
+            this.feedbackbutton.Click += new System.EventHandler(this.feedbackbutton_Click);
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(33, 1209);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(70, 25);
+            this.lblDate.TabIndex = 22;
+            this.lblDate.Text = "label1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(150, 785);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 25);
+            this.label1.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(83, 757);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(169, 37);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Cellphone:";
+            // 
+            // txtCellphone
+            // 
+            this.txtCellphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCellphone.Location = new System.Drawing.Point(290, 754);
+            this.txtCellphone.Name = "txtCellphone";
+            this.txtCellphone.Size = new System.Drawing.Size(387, 44);
+            this.txtCellphone.TabIndex = 25;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Location = new System.Drawing.Point(31, 847);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(232, 37);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "URLInstagram:";
+            // 
+            // txtUrlEmail
+            // 
+            this.txtUrlEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUrlEmail.Location = new System.Drawing.Point(290, 847);
+            this.txtUrlEmail.Name = "txtUrlEmail";
+            this.txtUrlEmail.Size = new System.Drawing.Size(387, 44);
+            this.txtUrlEmail.TabIndex = 27;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1690, 1142);
+            this.ClientSize = new System.Drawing.Size(1841, 1636);
+            this.Controls.Add(this.txtUrlEmail);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtCellphone);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.feedbackbutton);
-            this.Controls.Add(this.pfeedback);
-            this.Controls.Add(this.pemailvar);
-            this.Controls.Add(this.pphonevar);
-            this.Controls.Add(this.pzipvar);
-            this.Controls.Add(this.pstatevar);
-            this.Controls.Add(this.pcityvar);
-            this.Controls.Add(this.pSstreetvar);
-            this.Controls.Add(this.pfstreetvar);
-            this.Controls.Add(this.plnamevar);
-            this.Controls.Add(this.pmnamevar);
-            this.Controls.Add(this.pfnamevar);
+            this.Controls.Add(this.lblFeedback);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtZip);
+            this.Controls.Add(this.txtState);
+            this.Controls.Add(this.txtCity);
+            this.Controls.Add(this.txtSstreet);
+            this.Controls.Add(this.txtFstreet);
+            this.Controls.Add(this.txtLname);
+            this.Controls.Add(this.txtMname);
+            this.Controls.Add(this.txtFname);
             this.Controls.Add(this.pemail);
             this.Controls.Add(this.pphone);
             this.Controls.Add(this.pzip);
@@ -304,18 +375,24 @@ namespace Puello_WindowsAssigment
         private System.Windows.Forms.Label pzip;
         private System.Windows.Forms.Label pphone;
         private System.Windows.Forms.Label pemail;
-        private System.Windows.Forms.TextBox pfnamevar;
-        private System.Windows.Forms.TextBox pmnamevar;
-        private System.Windows.Forms.TextBox plnamevar;
-        private System.Windows.Forms.TextBox pfstreetvar;
-        private System.Windows.Forms.TextBox pSstreetvar;
-        private System.Windows.Forms.TextBox pcityvar;
-        private System.Windows.Forms.TextBox pstatevar;
-        private System.Windows.Forms.TextBox pzipvar;
-        private System.Windows.Forms.TextBox pphonevar;
-        private System.Windows.Forms.TextBox pemailvar;
-        private System.Windows.Forms.Label pfeedback;
+        private System.Windows.Forms.TextBox txtFname;
+        private System.Windows.Forms.TextBox txtMname;
+        private System.Windows.Forms.TextBox txtLname;
+        private System.Windows.Forms.TextBox txtFstreet;
+        private System.Windows.Forms.TextBox txtSstreet;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.TextBox txtState;
+        private System.Windows.Forms.TextBox txtZip;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblFeedback;
         private System.Windows.Forms.Button feedbackbutton;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCellphone;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtUrlEmail;
     }
 }
 
