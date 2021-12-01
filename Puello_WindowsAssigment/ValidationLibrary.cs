@@ -76,7 +76,7 @@ namespace Puello_WindowsAssigment
             {
                 result = false;
             }
-            else if (atLocation < 1)
+            else if (atLocation != -1)
             {
                 result = false;
             }

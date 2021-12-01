@@ -120,7 +120,6 @@ namespace Puello_WindowsAssigment
         public PersonV2() : base()
         {
             cellphone = "";
-        
             urlemail = "";
         }
 
